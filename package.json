@@ -1,0 +1,33 @@
+{
+  "name": "invoice-app",
+  "version": "1.0.0",
+  "description": "![Design preview for the Invoice app coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timegated/invoice-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timegated/invoice-app/issues"
+  },
+  "homepage": "https://github.com/timegated/invoice-app#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.0.1",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4"
+  }
+}

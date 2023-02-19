@@ -21,7 +21,8 @@
   "homepage": "https://github.com/timegated/invoice-app#readme",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router": "^6.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

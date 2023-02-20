@@ -1,0 +1,40 @@
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  flex: 0 0 200%;
+  border: 1px solid var(--main-color-purple);
+  border-radius: var(--main-border-radius-ends);
+  background-color: var(--secondary-color-black);
+}
+
+
+.nav-item-header {
+  background-color: var(--main-color-purple);
+  border-radius: var(--main-border-radius-ends);
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.bg-color-1 {
+  border-radius: 0 16px 0 0;
+  background-color: var(--main-color-purple);
+  height: 50%;
+}
+
+.bg-color-2 {
+  background-color: var(--secondary-color-purple);
+  border-radius: 16px 0 16px 0;
+  height: 50%;
+}
+
+.nav-item-header img {
+  position: absolute;
+  left: 1.7%;
+  width: 35px;
+  height: 35px;
+}

@@ -11,11 +11,14 @@
   --main-color-background: hsl(240, 27%, 98%);
   --main-color-papaya: hsl(0, 100%, 80%);
   --main-color-reddish: hsl(0, 80%, 63%);
+  --main-border-radius-ends: 0 16px 16px 0;
 }
 
 html, body {
+  display: flex;
   box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
   width: 100%;
   height: 100%;
-  border: 1px solid var(--secondary-color-black);
 }

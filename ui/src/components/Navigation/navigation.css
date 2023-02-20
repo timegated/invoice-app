@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  flex: 0 0 200%;
+  flex: 0 0 250%;
   border: 1px solid var(--main-color-purple);
   border-radius: var(--main-border-radius-ends);
   background-color: var(--secondary-color-black);
@@ -17,7 +17,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
 }
 
 .bg-color-1 {
@@ -34,7 +33,7 @@
 
 .nav-item-header img {
   position: absolute;
-  left: 1.7%;
-  width: 35px;
-  height: 35px;
+  left: 28px;
+  width: 40px;
+  height: 40px;
 }

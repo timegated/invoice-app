@@ -13,7 +13,7 @@
 .nav-item-header {
   background-color: var(--main-color-purple);
   border-radius: var(--main-border-radius-ends);
-  height: 10%;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;

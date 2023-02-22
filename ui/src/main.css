@@ -15,10 +15,16 @@
 }
 
 html, body {
-  display: flex;
   box-sizing: border-box;
   margin: 0;
-  overflow: hidden;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 100%;
+  width: 100%;
+  background: var(--main-color-background);
+} 

@@ -3,8 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  flex: 0 0 250%;
-  border: 1px solid var(--main-color-purple);
+  width: 100px;
   border-radius: var(--main-border-radius-ends);
   background-color: var(--secondary-color-black);
 }

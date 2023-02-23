@@ -20,11 +20,12 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .main-content {
   display: grid;
   grid-template-columns: 1fr 100%;
   width: 100%;
-  background: var(--main-color-background);
+  background-color : var(--main-color-background);
 } 

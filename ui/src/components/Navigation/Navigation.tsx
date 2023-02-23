@@ -1,12 +1,9 @@
-import React, { useState } from 'react'
 import logo from '../../assets/logo.svg';
 import avatar from '../../assets/image-avatar.jpg';
 import moon from '../../assets/icon-moon.svg';
 import './navigation.css';
 
 const Navigation = () => {
-  const [first, setfirst] = useState("");
-
   return (
     <section
       className="nav-container"

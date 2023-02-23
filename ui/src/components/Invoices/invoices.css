@@ -1,0 +1,47 @@
+.invoice-container {
+  width: 75%;
+}
+
+.invoice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  border-radius: 16px;
+  padding: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  border-radius: 8px;
+  background: #FFFFFF;
+}
+
+.invoice .invoice-id, .invoice-total {
+  font-weight: bold;
+}
+
+.invoice .invoice-id span {
+  font-weight: 100;
+}
+
+.invoice-created, .invoice-client {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--main-color-pale-blue)
+}
+
+.invoice-status {
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.invoice-status-paid {
+  background: rgba(51, 214, 159, 0.5)
+}
+
+.invoice-status-pending {
+  background: rgba(255, 143, 0, 0.5);
+}
+
+.invoice-status-draft {
+  background: rgba(55, 59, 83, 0.5);
+}

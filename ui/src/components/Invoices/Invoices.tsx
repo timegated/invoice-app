@@ -36,7 +36,6 @@ export interface InvoicesProps {
 
 
 export const Invoices = ({ data }: InvoicesProps): JSX.Element => {
-  console.log('Invoices: ', data);
   const getInvoiceStatusStyle = (status: string): string => {
     switch (status) {
       case 'paid':
@@ -60,7 +59,6 @@ export const Invoices = ({ data }: InvoicesProps): JSX.Element => {
 
   const processStatusString = (status: string): string => {
     const capFirst = status.slice(0, 1).toUpperCase();
-    console.log(capFirst)
     return status.replace(/(p|d)/, capFirst);
   };
 

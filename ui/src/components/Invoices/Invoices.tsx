@@ -16,7 +16,7 @@ export interface Address {
 }
 
 export interface Invoice {
-  id: string;
+  id: string; 
   createdAt: string;
   paymentDue: string;
   description: string;
@@ -75,7 +75,7 @@ export const Invoices = ({ data }: InvoicesProps): JSX.Element => {
               <span>#</span>{d.id}
             </div>
             <div className="invoice-created">
-              {d.createdAt}
+              Due {d.paymentDue}
             </div>
             <div className="invoice-client">
               {d.clientName}

@@ -30,9 +30,41 @@
   height: 50%;
 }
 
-.nav-item-header img {
+.nav-item-header a {
   position: absolute;
   left: 28px;
+}
+
+.nav-item-header img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-item-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 125px;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.nav-item-footer a > .icon-moon-img {
+  width: 25px;
+  height: 25px;
+}
+
+.nav-item-footer .user-profile-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #979797;
+}
+
+.nav-item-footer a > .user-profile-img {
+  border-radius: 50%;
   width: 40px;
   height: 40px;
 }

@@ -15,8 +15,16 @@
   background: #FFFFFF;
 }
 
+.invoice img {
+  width: 10px;
+  height: 15px;
+}
+
 .invoice .invoice-id, .invoice-total {
+  display: flex;
+  justify-content: center;
   font-weight: bold;
+  width: 100px;
 }
 
 .invoice .invoice-id span {
@@ -26,22 +34,28 @@
 .invoice-created, .invoice-client {
   font-style: normal;
   font-weight: 500;
-  color: var(--main-color-pale-blue)
+  color: var(--main-color-pale-blue);
+  width: 100px;
+  white-space: nowrap;
 }
 
 .invoice-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
   border-radius: 8px;
+  width: 100px;
 }
 
 .invoice-status-paid {
-  background: rgba(51, 214, 159, 0.5)
+  background: rgba(51, 214, 159, 0.1);
 }
 
 .invoice-status-pending {
-  background: rgba(255, 143, 0, 0.5);
+  background: rgba(255, 143, 0, 0.1);
 }
 
 .invoice-status-draft {
-  background: rgba(55, 59, 83, 0.5);
+  background: rgba(55, 59, 83, 0.1);
 }

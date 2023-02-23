@@ -46,7 +46,24 @@ export const Invoices = ({ data }: InvoicesProps): JSX.Element => {
       default:
         return 'invoice-status-draft';
     }
-  }
+  };
+  const getInvoiceStatusColor = (status: string): string => {
+    switch (status) {
+      case 'paid':
+        return '#33D69F'
+      case 'pending':
+        return '#FF8F00';
+      default:
+        return '#373B53'
+    }
+  };
+
+  const processStatusString = (status: string): string => {
+    const capFirst = status.slice(0, 1).toUpperCase();
+    console.log(capFirst)
+    return status.replace(/(p|d)/, capFirst);
+  };
+
   return (
     <section
       className="invoice-container">
@@ -69,8 +86,9 @@ export const Invoices = ({ data }: InvoicesProps): JSX.Element => {
               £{d.total}
             </div>
             <div className={`invoice-status ${getInvoiceStatusStyle(d.status)}`}>
+              <span style={{ marginRight: '15px', width: '10px', height: '10px', backgroundColor: `${getInvoiceStatusColor(d.status)}`, borderRadius: '50%' }}></span>
               <span>
-                {d.status}
+                {processStatusString(d.status)}
               </span>
             </div>
             <a href="#invoice-detail">

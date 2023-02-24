@@ -11,6 +11,14 @@ app.get('/', async (req: express.Request, res: express.Response) => {
     throw err;
   }
 });
+app.get('/hello', async (req: express.Request, res: express.Response) => {
+  try {
+    res.send({Msg: "Hello OK"})
+  } catch (err) {
+    console.error(err);
+    throw err;
+  }
+});
 
 
 app.listen(PORT, () => {

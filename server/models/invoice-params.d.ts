@@ -1,0 +1,3 @@
+interface InvoiceParams {
+  clientId: string;
+}

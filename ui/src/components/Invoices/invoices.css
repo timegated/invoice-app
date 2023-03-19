@@ -1,5 +1,7 @@
 .invoice-container {
+  height: 100vh;
   width: 75%;
+  margin: auto;
 }
 
 .invoice {
@@ -13,6 +15,7 @@
   box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   border-radius: 8px;
   background: #FFFFFF;
+  flex-wrap: wrap;
 }
 
 .invoice img {
@@ -25,13 +28,14 @@
   justify-content: center;
   font-weight: bold;
   width: 100px;
+  flex-wrap: wrap;
 }
 
 .invoice .invoice-id span {
   font-weight: 100;
 }
 
-.invoice-created, .invoice-client {
+.invoice-created, .invoice-client, .invoice-created-min-width, .invoice-client-min-width {
   font-style: normal;
   font-weight: 500;
   color: var(--main-color-pale-blue);
@@ -39,7 +43,7 @@
   white-space: nowrap;
 }
 
-.invoice-status {
+.invoice-status, .invoice-status-min-width {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,12 +54,57 @@
 
 .invoice-status-paid {
   background: rgba(51, 214, 159, 0.1);
+  color: #33D69F;
 }
 
 .invoice-status-pending {
   background: rgba(255, 143, 0, 0.1);
+  color: #FF8F00;
 }
 
 .invoice-status-draft {
   background: rgba(55, 59, 83, 0.1);
+  color: #373B53;
+}
+
+.no-invoices-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.no-invoices-container > .title {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.no-invoices-container > p {
+  white-space: wrap;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--main-color-pale-blue);
+  width: 50%;
+}
+
+.no-invoices-container > p > span {
+  color: var(--main-color-pale-blue);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+  .invoice-container {
+    margin: auto;
+  }
+
+  .invoice-total, .invoice-client, a[href="#invoice-detail"], .invoice-status {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+.invoice-total-min-width, .invoice-client-min-width, .invoice-status-min-width {
+  display: none;
+}
 }

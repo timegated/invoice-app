@@ -1,0 +1,8 @@
+.main-invoice-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: auto;
+  overflow-x: hidden;
+  width: 100%;
+}

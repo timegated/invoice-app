@@ -1,4 +1,6 @@
+import { InvoicesHeader } from '../InvoicesHeader/InvoicesHeader';
 import iconArrowRight from '../../assets/icon-arrow-right.svg';
+import noInvoices from '../../assets/illustration-empty.svg';
 import './invoices.css';
 
 export interface Item {
@@ -16,7 +18,7 @@ export interface Address {
 }
 
 export interface Invoice {
-  id: string; 
+  id: string;
   createdAt: string;
   paymentDue: string;
   description: string;
@@ -62,10 +64,22 @@ export const Invoices = ({ data }: InvoicesProps): JSX.Element => {
     return status.replace(/(p|d)/, capFirst);
   };
 
+  const renderNoInvoices = () => {
+    return (
+      <div
+        className="no-invoices-container">
+        <img src={noInvoices} alt="" width={500} />
+        <span className="title">There is nothing here</span>
+        <p>Create an invoice by clicking the <span>New Invoice</span> and get started</p>
+      </div>
+    )
+  }
+
   return (
     <section
       className="invoice-container">
-      {data.map((d) => {
+      <InvoicesHeader count={data.length} />
+      {data.length ? data.map((d) => {
         return (
           <div
             key={d.id}
@@ -73,9 +87,12 @@ export const Invoices = ({ data }: InvoicesProps): JSX.Element => {
           >
             <div className="invoice-id">
               <span>#</span>{d.id}
-            </div>
-            <div className="invoice-created">
-              Due {d.paymentDue}
+              <div className="invoice-created">
+                Due {d.paymentDue}
+              </div>
+              <div className="invoice-total-min-width">
+                £{d.total}
+              </div>
             </div>
             <div className="invoice-client">
               {d.clientName}
@@ -83,18 +100,27 @@ export const Invoices = ({ data }: InvoicesProps): JSX.Element => {
             <div className="invoice-total">
               £{d.total}
             </div>
+            <div className="invoice-client-min-width">
+              {d.clientName}
+              <div className={`invoice-status-min-width ${getInvoiceStatusStyle(d.status)}`}>
+                <span style={{ marginRight: '15px', width: '10px', height: '10px', backgroundColor: `${getInvoiceStatusColor(d.status)}`, borderRadius: '50%' }}></span>
+                <span>
+                  {processStatusString(d.status)}
+                </span>
+              </div>
+            </div>
             <div className={`invoice-status ${getInvoiceStatusStyle(d.status)}`}>
               <span style={{ marginRight: '15px', width: '10px', height: '10px', backgroundColor: `${getInvoiceStatusColor(d.status)}`, borderRadius: '50%' }}></span>
               <span>
                 {processStatusString(d.status)}
               </span>
             </div>
-            <a href="#invoice-detail">
+            <a className="invoice-link" href="#invoice-detail">
               <img src={iconArrowRight} alt="" />
             </a>
           </div>
         )
-      })}
+      }) : renderNoInvoices() }
     </section>
   )
 }

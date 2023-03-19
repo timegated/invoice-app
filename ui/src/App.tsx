@@ -1,21 +1,18 @@
 import { Invoices } from './components/Invoices/Invoices';
+import Navigation from './components/Navigation/Navigation';
 import data from '../data.json';
 import './app.css';
 
 const App = (): JSX.Element => {
   console.log(data);
+  const noData: any = []
   return (
-    <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      maxWidth: '75%'
-    }}
-    >
-    <Invoices data={data} />
-    </div>
+    <>
+    <section className="main-invoice-content">
+    <Navigation />
+    <Invoices data={noData} />
+    </section>
+    </>
   )
 }
 

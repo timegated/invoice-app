@@ -1,0 +1,78 @@
+.invoices-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.invoice-header-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.invoice-header-title > .title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.invoice-header__actions {
+  display: flex;
+  align-items: center;
+}
+
+.invoice-header__filter {
+  margin-right: 3rem;
+}
+
+.invoice-header__filter span {
+  margin-right: 2rem;
+  font-weight: bold;
+}
+
+.invoice-header__filter:hover {
+  cursor: pointer;
+}
+
+.invoice-header__filter img {
+  transform: rotate(90deg);
+}
+
+.invoice-header__filter .active {
+  transform: rotate(-90deg);
+}
+
+.invoice-header__new {
+  display: flex;
+  align-items: center;
+  border-radius: 32px;
+  outline: none;
+  border: none;
+  background-color: var(--main-color-purple);
+  color: #FFFFFF;
+  padding: 1rem;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.invoice-header__new > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin-right: 1rem;
+}
+
+.invoice-header__new > div > img {
+  width: 10px;
+  height: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .invoices-header-container {
+    margin: 1rem auto;
+  }
+}

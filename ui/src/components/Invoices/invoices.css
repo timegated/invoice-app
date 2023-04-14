@@ -81,11 +81,11 @@
 }
 
 .no-invoices-container > p {
-  white-space: wrap;
   font-size: 20px;
   font-weight: 400;
   color: var(--main-color-pale-blue);
   width: 50%;
+  text-align: center;
 }
 
 .no-invoices-container > p > span {

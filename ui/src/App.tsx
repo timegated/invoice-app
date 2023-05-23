@@ -10,7 +10,7 @@ const App = (): JSX.Element => {
     <>
     <section className="main-invoice-content">
     <Navigation />
-    <Invoices data={noData} />
+    <Invoices data={data} />
     </section>
     </>
   )
